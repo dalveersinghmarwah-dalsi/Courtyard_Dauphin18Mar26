@@ -43,82 +43,82 @@
 }
 
 :root {
-  /* Sophisticated Warm Palette - Inspired by Yellowhammer Hospitality */
-  /* Primary: Deep Warm Brown */
-  --primary: #5A4A42;
-  --primary-foreground: #FFFFFF;
-  /* Secondary: Bright Lime Green Accent */
-  --secondary: #00FF00;
-  --secondary-foreground: #000000;
-  /* Accent: Warm Taupe */
-  --accent: #D4B5A0;
-  --accent-foreground: #3A3A3A;
+  /* Royal Luxury Palette - Deep, Elegant, Sophisticated */
+  /* Primary: Deep Navy/Black */
+  --primary: #1a1a2e;
+  --primary-foreground: #ffffff;
+  /* Secondary: Rich Gold */
+  --secondary: #d4af37;
+  --secondary-foreground: #1a1a2e;
+  /* Accent: Deep Purple */
+  --accent: #4a3f8f;
+  --accent-foreground: #ffffff;
   /* Sidebar colors */
-  --sidebar-primary: #8B7B73;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #00FF00;
-  --sidebar-accent-foreground: #000000;
+  --sidebar-primary: #2a2a4e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d4af37;
+  --sidebar-accent-foreground: #1a1a2e;
   /* Chart colors */
-  --chart-1: #D4B5A0;
-  --chart-2: #B8956A;
-  --chart-3: #9B8B7E;
-  --chart-4: #7A6B63;
-  --chart-5: #5A4A42;
+  --chart-1: #d4af37;
+  --chart-2: #b8956a;
+  --chart-3: #9b8b7e;
+  --chart-4: #7a6b63;
+  --chart-5: #5a4a42;
   /* Spacing and radius */
   --radius: 0.5rem;
-  /* Background: Warm Cream */
-  --background: #F5F2EE;
-  --foreground: #3A3A3A;
-  --card: #FFFFFF;
-  --card-foreground: #3A3A3A;
-  --popover: #FFFFFF;
-  --popover-foreground: #3A3A3A;
-  --muted: #D4B5A0;
-  --muted-foreground: #5A4A42;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #E5DDD5;
-  --input: #FFFFFF;
-  --ring: #00FF00;
-  --sidebar: #F5F2EE;
-  --sidebar-foreground: #3A3A3A;
-  --sidebar-border: #E5DDD5;
-  --sidebar-ring: #00FF00;
+  /* Background: Soft Off-White */
+  --background: #faf9f7;
+  --foreground: #2a2a2a;
+  --card: #ffffff;
+  --card-foreground: #2a2a2a;
+  --popover: #ffffff;
+  --popover-foreground: #2a2a2a;
+  --muted: #e8e8e8;
+  --muted-foreground: #666666;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #ffffff;
+  --ring: #d4af37;
+  --sidebar: #faf9f7;
+  --sidebar-foreground: #2a2a2a;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #d4af37;
 }
 
 .dark {
-  --primary: #8B7B73;
-  --primary-foreground: #FFFFFF;
-  --sidebar-primary: #B8956A;
-  --sidebar-primary-foreground: #FFFFFF;
-  --background: #2A2420;
-  --foreground: #F5F2EE;
-  --card: #3A3430;
-  --card-foreground: #F5F2EE;
-  --popover: #3A3430;
-  --popover-foreground: #F5F2EE;
-  --secondary: #00FF00;
-  --secondary-foreground: #000000;
-  --muted: #5A4A42;
-  --muted-foreground: #D4B5A0;
-  --accent: #D4B5A0;
-  --accent-foreground: #2A2420;
-  --destructive: #FF6B6B;
-  --destructive-foreground: #FFFFFF;
-  --border: #4A3A32;
-  --input: #3A3430;
-  --ring: #00FF00;
-  --chart-1: #D4B5A0;
-  --chart-2: #B8956A;
-  --chart-3: #9B8B7E;
-  --chart-4: #7A6B63;
-  --chart-5: #5A4A42;
-  --sidebar: #3A3430;
-  --sidebar-foreground: #F5F2EE;
-  --sidebar-accent: #00FF00;
-  --sidebar-accent-foreground: #000000;
-  --sidebar-border: #4A3A32;
-  --sidebar-ring: #00FF00;
+  --primary: #0f0f1e;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #1a1a2e;
+  --sidebar-primary-foreground: #ffffff;
+  --background: #0f0f1e;
+  --foreground: #e8e8e8;
+  --card: #1a1a2e;
+  --card-foreground: #e8e8e8;
+  --popover: #1a1a2e;
+  --popover-foreground: #e8e8e8;
+  --secondary: #d4af37;
+  --secondary-foreground: #1a1a2e;
+  --muted: #2a2a4e;
+  --muted-foreground: #b8b8b8;
+  --accent: #6b5b95;
+  --accent-foreground: #ffffff;
+  --destructive: #ff6b6b;
+  --destructive-foreground: #ffffff;
+  --border: #2a2a4e;
+  --input: #1a1a2e;
+  --ring: #d4af37;
+  --chart-1: #d4af37;
+  --chart-2: #b8956a;
+  --chart-3: #9b8b7e;
+  --chart-4: #7a6b63;
+  --chart-5: #5a4a42;
+  --sidebar: #1a1a2e;
+  --sidebar-foreground: #e8e8e8;
+  --sidebar-accent: #d4af37;
+  --sidebar-accent-foreground: #1a1a2e;
+  --sidebar-border: #2a2a4e;
+  --sidebar-ring: #d4af37;
 }
 
 @layer base {
@@ -175,29 +175,42 @@
     }
   }
 
-  /* Scroll animation utilities - Smooth, soft transitions */
+  /* Scroll animation utilities - FIXED: Text stays visible once revealed */
   .fade-in-up {
     opacity: 0;
     transform: translateY(2rem);
-    animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+
+  .fade-in-up.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 
   .fade-in {
     opacity: 0;
-    animation: fadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 
-  /* Smooth transition defaults */
-  * {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  .fade-in.animate-in {
+    opacity: 1;
+    animation: fadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 
-  /* Prevent transitions on animations */
-  *[class*="animate"] {
-    transition: none !important;
+  /* Smooth transition defaults - but NOT on animations */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  [role="button"] {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
     to {
       opacity: 1;
       transform: translateY(0);
@@ -205,6 +218,9 @@
   }
 
   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
     to {
       opacity: 1;
     }

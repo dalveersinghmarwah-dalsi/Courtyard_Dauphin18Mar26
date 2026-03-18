@@ -3,8 +3,8 @@ import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 /**
- * Layout Component
- * Sophisticated warm design with sticky navigation and graceful interactions
+ * Layout Component - Royal Luxury Aesthetic
+ * Clean, elegant navigation with deep navy and gold accents
  */
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
+      <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <span className="text-2xl font-bold text-primary leading-none font-serif">
                 THE COURTYARD
               </span>
-              <span className="text-xs text-primary/70 font-semibold tracking-widest">
+              <span className="text-xs text-primary/60 font-semibold tracking-widest">
                 ON DAUPHIN
               </span>
             </div>
@@ -42,7 +42,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-200"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-300"
               >
                 {item.label}
               </Link>
@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-4">
             <a
               href="tel:251-333-7368"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300"
             >
               <Phone size={16} />
               <span>251-333-RENT</span>
@@ -62,7 +62,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
+              className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors duration-300"
               aria-label="Toggle menu"
             >
               {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -87,7 +87,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2 duration-300"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
@@ -95,7 +95,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <a
                 href="tel:251-333-7368"
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg transition-all duration-200 font-medium text-sm mt-2"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2"
               >
                 <Phone size={16} />
                 <span>251-333-RENT</span>
@@ -140,7 +140,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="opacity-75 hover:opacity-100 transition-opacity"
+                      className="opacity-75 hover:opacity-100 transition-opacity duration-300"
                     >
                       {item.label}
                     </Link>
@@ -162,7 +162,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      className="opacity-75 hover:opacity-100 transition-opacity"
+                      className="opacity-75 hover:opacity-100 transition-opacity duration-300"
                     >
                       {item.label}
                     </Link>
@@ -178,7 +178,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <a
                     href="tel:251-333-7368"
-                    className="opacity-75 hover:opacity-100 transition-opacity flex items-center gap-2"
+                    className="opacity-75 hover:opacity-100 transition-opacity flex items-center gap-2 duration-300"
                   >
                     <Phone size={16} />
                     251-333-RENT
@@ -187,7 +187,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li>
                   <a
                     href="mailto:info@rentyellowhammer.com"
-                    className="opacity-75 hover:opacity-100 transition-opacity"
+                    className="opacity-75 hover:opacity-100 transition-opacity duration-300"
                   >
                     info@rentyellowhammer.com
                   </a>
@@ -213,7 +213,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Floating CTA for Mobile */}
       <div className="fixed bottom-6 right-6 md:hidden z-40">
-        <Link href="/contact" className="flex items-center justify-center w-14 h-14 bg-secondary text-secondary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110">
+        <Link href="/contact" className="flex items-center justify-center w-14 h-14 bg-secondary text-secondary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
           <Phone size={24} />
         </Link>
       </div>
