@@ -147,7 +147,7 @@ export default function Gallery() {
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-gold">
             See The Courtyard in Person
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
@@ -168,6 +168,15 @@ export default function Gallery() {
               Call 251-333-RENT
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Philosophical Quote */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container text-center max-w-2xl mx-auto px-4">
+          <p className="font-allison text-4xl md:text-5xl text-brand-gold mb-4">
+            "The best things in life are not things." – Art Buchwald
+          </p>
         </div>
       </section>
     </Layout>

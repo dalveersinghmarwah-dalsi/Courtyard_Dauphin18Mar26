@@ -307,7 +307,7 @@ export default function Parties() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-gold">
             Ready to Celebrate?
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
@@ -324,6 +324,15 @@ export default function Parties() {
               Call 251-333-RENT
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Philosophical Quote */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container text-center max-w-2xl mx-auto px-4">
+          <p className="font-allison text-4xl md:text-5xl text-brand-gold mb-4">
+            "Life may not be the party we hoped for, but while we're here we should dance." – Vivre
+          </p>
         </div>
       </section>
     </Layout>

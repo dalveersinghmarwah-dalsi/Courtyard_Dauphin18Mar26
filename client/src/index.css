@@ -88,6 +88,8 @@
   --sidebar-foreground: #2a2a2a;
   --sidebar-border: #ede8e3;
   --sidebar-ring: #e8c9a0;
+  /* Brand Golden Color */
+  --brand-gold: #d4af37;
 }
 
 .dark {
@@ -154,6 +156,12 @@
 @layer utilities {
   .bg-custom-bg-color {
     background-color: var(--custom-bg-color);
+  }
+  .text-brand-gold {
+    color: var(--brand-gold);
+  }
+  .font-allison {
+    font-family: 'Allison', cursive;
   }
 }
 

@@ -121,7 +121,7 @@ export default function Venue() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/90 text-white pattern-fade relative">
         <div className="container text-center max-w-3xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif animate-float-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif animate-float-up text-brand-gold">
             Ready to Tour?
           </h2>
           <p className="text-lg text-white/90 mb-8 animate-float-up delay-100">
@@ -141,6 +141,15 @@ export default function Venue() {
               Call 251-333-RENT
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Philosophical Quote */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container text-center max-w-2xl mx-auto px-4">
+          <p className="font-allison text-4xl md:text-5xl text-brand-gold mb-4">
+            "Some people look for a beautiful place. Others make a place beautiful." – Hazrat Inayat Khan
+          </p>
         </div>
       </section>
     </Layout>
