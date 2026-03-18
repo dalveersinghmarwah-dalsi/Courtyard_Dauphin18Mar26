@@ -33,10 +33,10 @@ export default function Home() {
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} animate-pulse-grow`}>
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} animate-very-slow-fade-in`}>
             The Courtyard on Dauphin
           </h1>
-          <p className={`text-xl md:text-2xl text-foreground/80 mb-12 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} animate-float`}>
+          <p className={`text-xl md:text-2xl text-foreground/80 mb-12 font-light transition-all duration-1000 delay-500 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} animate-very-slow-float`}>
             An experience tailored for you
           </p>
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-300 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -91,7 +91,7 @@ export default function Home() {
                 className="group p-8 bg-white rounded-xl text-center hover-lift hover-glow transition-all duration-300 border border-muted animate-float-up hover:animate-glow"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="text-4xl mb-4 group-hover:animate-bounce transition-all duration-300 inline-block">{event.icon}</div>
+                <div className="text-4xl mb-4 group-hover:animate-bounce transition-all duration-300 inline-block animate-subtle-tilt">{event.icon}</div>
                 <h3 className="text-2xl font-bold text-primary mb-4 font-serif group-hover:text-secondary transition-colors duration-300 underline-animate">
                   {event.title}
                 </h3>

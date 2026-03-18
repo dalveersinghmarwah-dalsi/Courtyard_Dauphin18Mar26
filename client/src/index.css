@@ -596,6 +596,51 @@
     width: 100%;
   }
 
+  /* Subtle tilt animation */
+  @keyframes subtleTilt {
+    0%, 100% {
+      transform: rotateY(-2deg) rotateX(1deg);
+    }
+    50% {
+      transform: rotateY(2deg) rotateX(-1deg);
+    }
+  }
+
+  .animate-subtle-tilt {
+    animation: subtleTilt 4s ease-in-out infinite;
+    perspective: 1000px;
+  }
+
+  /* Very slow fade in */
+  @keyframes verySlowFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-very-slow-fade-in {
+    animation: verySlowFadeIn 3s ease-in-out forwards;
+  }
+
+  /* Very slow float */
+  @keyframes verySlowFloat {
+    0%, 100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-8px);
+      opacity: 0.95;
+    }
+  }
+
+  .animate-very-slow-float {
+    animation: verySlowFloat 5s ease-in-out infinite;
+  }
+
   /* Subtle pattern backgrounds - dissolve effect */
   .pattern-dots {
     background-image: 
