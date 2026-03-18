@@ -39,8 +39,8 @@ export default function CTAButton({
 
   if (href) {
     return (
-      <Link href={href}>
-        <a className={classes}>{children}</a>
+      <Link href={href} className={classes}>
+        {children}
       </Link>
     );
   }
