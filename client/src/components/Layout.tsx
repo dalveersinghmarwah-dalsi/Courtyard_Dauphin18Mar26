@@ -40,6 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               { href: "/contact", label: "Contact" },
             ].map((item) => (
               <Link
+                key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-300 relative group underline-animate"
               >
