@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section ref={section1Ref} className="py-24 md:py-32 bg-white pattern-dots fade-in-up animate-in relative">
+      <section ref={section1Ref} className="py-20 md:py-28 bg-white pattern-dots fade-in-up animate-in relative">
         <div className="container max-w-3xl mx-auto px-4 relative z-10">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif animate-float-up hover-glow p-4 rounded-lg transition-all duration-300">
@@ -72,7 +72,7 @@ export default function Home() {
       </section>
 
       {/* Event Types */}
-      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/8 to-accent/6 fade-in-up animate-in pattern-lines relative">
+      <section ref={section2Ref} className="py-20 md:py-28 bg-gradient-to-br from-muted/8 to-accent/6 fade-in-up animate-in pattern-lines relative">
         <div className="container max-w-5xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
             Events We Host
@@ -88,11 +88,11 @@ export default function Home() {
               <a
                 key={index}
                 href={event.href}
-                className="group p-8 bg-white rounded-xl text-center hover-lift hover-glow transition-all duration-300 border border-muted animate-float-up hover:animate-glow"
+                className="group p-8 bg-white rounded-xl text-center hover-lift hover-glow transition-all duration-300 border border-muted animate-float-up hover:animate-glow flex flex-col items-center gap-4"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <i className={`${event.iconClass} text-4xl mb-4 text-secondary group-hover:animate-bounce transition-all duration-300 block mx-auto animate-subtle-tilt`}></i>
-                <h3 className="text-2xl font-bold text-primary mb-4 font-serif group-hover:text-secondary transition-colors duration-300 underline-animate">
+                <i className={`${event.iconClass} text-4xl text-secondary group-hover:animate-bounce transition-all duration-300 animate-subtle-tilt`}></i>
+                <h3 className="text-2xl font-bold text-primary font-serif group-hover:text-secondary transition-colors duration-300 underline-animate">
                   {event.title}
                 </h3>
                 <p className="text-foreground/70 text-sm group-hover:text-foreground transition-colors duration-300">
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section ref={section3Ref} className="py-24 md:py-32 bg-custom-bg-color fade-in-up animate-in pattern-grid relative">
+      <section ref={section3Ref} className="py-20 md:py-28 bg-custom-bg-color fade-in-up animate-in pattern-grid relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Why Choose Us
@@ -146,9 +146,9 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section ref={section4Ref} className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/95 text-white fade-in-up animate-in pattern-fade relative">
+      <section ref={section4Ref} className="py-20 md:py-28 bg-gradient-to-br from-primary to-primary/95 text-white fade-in-up animate-in pattern-fade relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center font-serif animate-float-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center font-serif animate-float-up text-white">
             What Our Clients Say
           </h2>
 
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="container text-center max-w-3xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif animate-float-up">
             Ready to Plan Your Event?

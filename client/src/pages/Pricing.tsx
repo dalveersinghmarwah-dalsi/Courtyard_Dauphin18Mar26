@@ -90,7 +90,7 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Tiers */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -176,7 +176,7 @@ export default function Pricing() {
       </section>
 
       {/* What's Included */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -210,7 +210,7 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Details */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -289,7 +289,7 @@ export default function Pricing() {
       </section>
 
       {/* Lead Form */}
-      <section id="contact-form" className="py-20 md:py-32 bg-white">
+      <section id="contact-form" className="py-16 md:py-24 bg-white">
         <div className="container">
           <LeadForm
             title="Get Custom Pricing"
@@ -299,7 +299,7 @@ export default function Pricing() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -341,7 +341,7 @@ export default function Pricing() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Book Your Event?

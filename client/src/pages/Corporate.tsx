@@ -94,7 +94,7 @@ export default function Corporate() {
       </section>
 
       {/* Corporate Services */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-serif">
@@ -120,7 +120,7 @@ export default function Corporate() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image */}
@@ -170,7 +170,7 @@ export default function Corporate() {
       />
 
       {/* Corporate Features */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -204,7 +204,7 @@ export default function Corporate() {
       </section>
 
       {/* Event Types */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -261,7 +261,7 @@ export default function Corporate() {
       </section>
 
       {/* Lead Form */}
-      <section id="contact-form" className="py-20 md:py-32 bg-white">
+      <section id="contact-form" className="py-16 md:py-24 bg-white">
         <div className="container">
           <LeadForm
             title="Plan Your Corporate Event"
@@ -272,7 +272,7 @@ export default function Corporate() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -314,7 +314,7 @@ export default function Corporate() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Plan Your Corporate Event

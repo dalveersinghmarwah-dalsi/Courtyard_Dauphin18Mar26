@@ -32,7 +32,7 @@ export default function Venue() {
       </section>
 
       {/* About Section */}
-      <section ref={section1Ref} className="py-24 md:py-32 bg-white pattern-dots fade-in-up animate-in relative">
+      <section ref={section1Ref} className="py-16 md:py-24 bg-white pattern-dots fade-in-up animate-in relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Image Placeholder */}
@@ -57,7 +57,7 @@ export default function Venue() {
       </section>
 
       {/* Amenities */}
-      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/8 to-accent/6 fade-in-up animate-in pattern-lines relative">
+      <section ref={section2Ref} className="py-16 md:py-24 bg-gradient-to-br from-muted/8 to-accent/6 fade-in-up animate-in pattern-lines relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Amenities & Features
@@ -88,7 +88,7 @@ export default function Venue() {
       </section>
 
       {/* Capacity Section */}
-      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in pattern-grid relative">
+      <section ref={section3Ref} className="py-16 md:py-24 bg-white fade-in-up animate-in pattern-grid relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Flexible Capacity
@@ -119,7 +119,7 @@ export default function Venue() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/90 text-white pattern-fade relative">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/90 text-white pattern-fade relative">
         <div className="container text-center max-w-3xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif animate-float-up">
             Ready to Tour?

@@ -44,7 +44,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Phone */}
@@ -111,7 +111,7 @@ export default function Contact() {
       </section>
 
       {/* Lead Form */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <LeadForm
             title="Schedule a Tour or Get Information"
@@ -121,7 +121,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -190,7 +190,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -232,7 +232,7 @@ export default function Contact() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             We Can't Wait to Meet You!

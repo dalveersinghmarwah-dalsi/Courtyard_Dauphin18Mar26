@@ -74,7 +74,7 @@ export default function Gallery() {
       </section>
 
       {/* Gallery */}
-      <section className="py-20 md:py-32 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="container">
           {/* Filter Buttons */}
           <div className="flex flex-wrap gap-3 justify-center mb-16">
@@ -145,7 +145,7 @@ export default function Gallery() {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
+      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             See The Courtyard in Person
