@@ -422,7 +422,7 @@
   }
 
   .animate-bounce {
-    animation: bounce 1s ease-in-out infinite;
+    animation: bounce 1.5s ease-in-out infinite;
   }
 
   /* Shimmer animation */
@@ -639,6 +639,20 @@
 
   .animate-very-slow-float {
     animation: verySlowFloat 5s ease-in-out infinite;
+  }
+
+  /* Continuous float for hero title */
+  @keyframes continuousFloat {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .animate-continuous-float {
+    animation: continuousFloat 6s ease-in-out infinite;
   }
 
   /* Subtle pattern backgrounds - dissolve effect */

@@ -1,5 +1,5 @@
+import * as React from "react";
 import Layout from "@/components/Layout";
-import HeroSection from "@/components/HeroSection";
 import LeadForm from "@/components/LeadForm";
 import Testimonials from "@/components/Testimonials";
 import CTAButton from "@/components/CTAButton";
@@ -67,28 +67,39 @@ const eventTypes = [
 
 export default function Parties() {
   useSEO(seoMetadata.parties);
+  const [animateHero, setAnimateHero] = React.useState(false);
+
+  React.useEffect(() => {
+    setAnimateHero(true);
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="Parties & Personal Events"
-        subtitle="Celebrate life's special moments in our historic, elegant venue. Perfect for birthdays, showers, anniversaries, and more."
-        ctaText="Plan Your Event"
-        ctaHref="#contact-form"
-        ctaSecondary={{
-          text: "Schedule a Tour",
-          href: "/contact",
-        }}
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/6 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+        </div>
+
+        <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            Parties & Events
+          </h1>
+          <p className={`text-xl md:text-2xl text-foreground/80 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            Celebrate life's special moments in our historic, elegant venue
+          </p>
+        </div>
+      </section>
 
       {/* Event Types */}
       <section className="py-20 md:py-32 bg-white">
-        <div className="container">
+        <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-serif">
               Perfect for Every Celebration
             </h2>
-            <div className="w-16 h-1 bg-secondary mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
