@@ -40,9 +40,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               { href: "/contact", label: "Contact" },
             ].map((item) => (
               <Link
-                key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-300 relative group"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-300 relative group underline-animate"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
@@ -54,9 +53,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-4">
             <a
               href="tel:251-333-7368"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300 hover-lift hover-glow animate-bounce"
             >
-              <Phone size={16} />
+              <Phone size={16} className="animate-wiggle" />
               <span>251-333-RENT</span>
             </a>
 
@@ -96,9 +95,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <a
                 href="tel:251-333-7368"
-                className="flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2"
+                className="flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2 hover-lift hover-glow animate-bounce"
               >
-                <Phone size={16} />
+                <Phone size={16} className="animate-wiggle" />
                 <span>251-333-RENT</span>
               </a>
             </div>
