@@ -12,60 +12,42 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-primary leading-none">
-                  THE COURTYARD
-                </span>
-                <span className="text-xs text-secondary font-semibold tracking-widest">
-                  ON DAUPHIN
-                </span>
-              </div>
-            </a>
+          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-primary leading-none">
+                THE COURTYARD
+              </span>
+              <span className="text-xs text-secondary font-semibold tracking-widest">
+                ON DAUPHIN
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Home
-              </a>
+            <Link href="/" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Home
             </Link>
-            <Link href="/venue">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                The Venue
-              </a>
+            <Link href="/venue" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              The Venue
             </Link>
-            <Link href="/weddings">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Weddings
-              </a>
+            <Link href="/weddings" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Weddings
             </Link>
-            <Link href="/parties">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Parties & Events
-              </a>
+            <Link href="/parties" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Parties & Events
             </Link>
-            <Link href="/corporate">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Corporate
-              </a>
+            <Link href="/corporate" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Corporate
             </Link>
-            <Link href="/gallery">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Gallery
-              </a>
+            <Link href="/gallery" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Gallery
             </Link>
-            <Link href="/pricing">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Pricing
-              </a>
+            <Link href="/pricing" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Pricing
             </Link>
-            <Link href="/contact">
-              <a className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
-                Contact
-              </a>
+            <Link href="/contact" className="text-sm font-medium text-foreground hover:text-secondary transition-colors">
+              Contact
             </Link>
           </nav>
 
@@ -94,69 +76,61 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {menuOpen && (
           <nav className="md:hidden border-t border-border bg-background">
             <div className="container py-4 flex flex-col gap-3">
-              <Link href="/">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Home
-                </a>
+              <Link
+                href="/"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
               </Link>
-              <Link href="/venue">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  The Venue
-                </a>
+              <Link
+                href="/venue"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                The Venue
               </Link>
-              <Link href="/weddings">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Weddings
-                </a>
+              <Link
+                href="/weddings"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Weddings
               </Link>
-              <Link href="/parties">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Parties & Events
-                </a>
+              <Link
+                href="/parties"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Parties & Events
               </Link>
-              <Link href="/corporate">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Corporate
-                </a>
+              <Link
+                href="/corporate"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Corporate
               </Link>
-              <Link href="/gallery">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Gallery
-                </a>
+              <Link
+                href="/gallery"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Gallery
               </Link>
-              <Link href="/pricing">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Pricing
-                </a>
+              <Link
+                href="/pricing"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Pricing
               </Link>
-              <Link href="/contact">
-                <a
-                  className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Contact
-                </a>
+              <Link
+                href="/contact"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors py-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
               </Link>
               <a
                 href="tel:251-333-7368"
@@ -197,31 +171,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-bold text-base mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Home
-                    </a>
+                  <Link href="/" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/venue">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      The Venue
-                    </a>
+                  <Link href="/venue" className="opacity-75 hover:opacity-100 transition-opacity">
+                    The Venue
                   </Link>
                 </li>
                 <li>
-                  <Link href="/gallery">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Gallery
-                    </a>
+                  <Link href="/gallery" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Gallery
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Contact
-                    </a>
+                  <Link href="/contact" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Contact
                   </Link>
                 </li>
               </ul>
@@ -232,31 +198,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-bold text-base mb-4">Event Types</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/weddings">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Weddings
-                    </a>
+                  <Link href="/weddings" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Weddings
                   </Link>
                 </li>
                 <li>
-                  <Link href="/parties">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Parties & Personal Events
-                    </a>
+                  <Link href="/parties" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Parties & Personal Events
                   </Link>
                 </li>
                 <li>
-                  <Link href="/corporate">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Corporate Events
-                    </a>
+                  <Link href="/corporate" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Corporate Events
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing">
-                    <a className="opacity-75 hover:opacity-100 transition-opacity">
-                      Pricing
-                    </a>
+                  <Link href="/pricing" className="opacity-75 hover:opacity-100 transition-opacity">
+                    Pricing
                   </Link>
                 </li>
               </ul>
@@ -304,10 +262,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Floating CTA for Mobile */}
       <div className="fixed bottom-6 right-6 md:hidden">
-        <Link href="/contact">
-          <a className="flex items-center justify-center w-14 h-14 bg-secondary text-secondary-foreground rounded-full shadow-lg hover:shadow-xl transition-shadow">
-            <Phone size={24} />
-          </a>
+        <Link href="/contact" className="flex items-center justify-center w-14 h-14 bg-secondary text-secondary-foreground rounded-full shadow-lg hover:shadow-xl transition-shadow">
+          <Phone size={24} />
         </Link>
       </div>
     </div>
