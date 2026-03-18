@@ -130,7 +130,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-bold text-base mb-4 font-serif">Quick Links</h4>
+              <h4 className="font-bold text-base mb-4 font-serif text-white/90">Quick Links</h4>
               <ul className="space-y-2 text-sm">
                 {[
                   { href: "/", label: "Home" },
@@ -152,7 +152,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Event Types */}
             <div>
-              <h4 className="font-bold text-base mb-4 font-serif">Event Types</h4>
+              <h4 className="font-bold text-base mb-4 font-serif text-white/90">Event Types</h4>
               <ul className="space-y-2 text-sm">
                 {[
                   { href: "/weddings", label: "Weddings" },
@@ -174,7 +174,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Contact */}
             <div>
-              <h4 className="font-bold text-base mb-4 font-serif">Contact</h4>
+              <h4 className="font-bold text-base mb-4 font-serif text-white/90">Contact</h4>
               <ul className="space-y-3 text-sm">
                 <li>
                   <a

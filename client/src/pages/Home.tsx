@@ -74,16 +74,16 @@ export default function Home() {
       {/* Event Types */}
       <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/8 to-accent/6 fade-in-up animate-in pattern-lines relative">
         <div className="container max-w-5xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up underline-animate">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
             Events We Host
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Weddings", href: "/weddings", icon: "💍" },
-              { title: "Parties & Events", href: "/parties", icon: "🎉" },
-              { title: "Corporate", href: "/corporate", icon: "💼" },
-              { title: "Gallery", href: "/gallery", icon: "📸" },
+              { title: "Weddings", href: "/weddings", iconClass: "fa-solid fa-ring" },
+              { title: "Parties & Events", href: "/parties", iconClass: "fa-solid fa-champagne-glasses" },
+              { title: "Corporate", href: "/corporate", iconClass: "fa-solid fa-briefcase" },
+              { title: "Gallery", href: "/gallery", iconClass: "fa-solid fa-camera" },
             ].map((event, index) => (
               <a
                 key={index}
@@ -91,12 +91,12 @@ export default function Home() {
                 className="group p-8 bg-white rounded-xl text-center hover-lift hover-glow transition-all duration-300 border border-muted animate-float-up hover:animate-glow"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="text-4xl mb-4 group-hover:animate-bounce transition-all duration-300 inline-block animate-subtle-tilt">{event.icon}</div>
+                <i className={`${event.iconClass} text-4xl mb-4 text-secondary group-hover:animate-bounce transition-all duration-300 block mx-auto animate-subtle-tilt`}></i>
                 <h3 className="text-2xl font-bold text-primary mb-4 font-serif group-hover:text-secondary transition-colors duration-300 underline-animate">
                   {event.title}
                 </h3>
                 <p className="text-foreground/70 text-sm group-hover:text-foreground transition-colors duration-300">
-                  Discover what makes us perfect for your {event.title.toLowerCase()}
+                  Discover what makes us perfect for your {event.title.toLowerCase().replace(" & ", " and ")}
                 </p>
               </a>
             ))}
@@ -105,7 +105,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in pattern-grid relative">
+      <section ref={section3Ref} className="py-24 md:py-32 bg-custom-bg-color fade-in-up animate-in pattern-grid relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Why Choose Us

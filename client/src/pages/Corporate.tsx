@@ -76,7 +76,7 @@ export default function Corporate() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
+      <section className="relative h-[60vh] pt-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
@@ -84,7 +84,7 @@ export default function Corporate() {
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-4 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             Corporate Events
           </h1>
           <p className={`text-xl md:text-2xl text-foreground/80 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -130,19 +130,19 @@ export default function Corporate() {
 
             {/* Content */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Professional Excellence
               </h2>
               <div className="w-12 h-1 bg-secondary mb-8"></div>
 
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-foreground/70 mb-4 leading-relaxed">
                 The Courtyard on Dauphin is the ideal venue for corporate events,
                 retreats, and business gatherings. Our professional team
                 understands the unique requirements of corporate events and
                 delivers flawless execution.
               </p>
 
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-foreground/70 mb-4 leading-relaxed">
                 Whether you're hosting a client appreciation event, team retreat,
                 board meeting, or holiday celebration, our elegant space provides
                 the perfect backdrop for business success. We handle all logistics
@@ -316,7 +316,7 @@ export default function Corporate() {
       {/* Final CTA */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Plan Your Corporate Event
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">

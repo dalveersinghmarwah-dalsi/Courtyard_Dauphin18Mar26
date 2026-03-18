@@ -76,7 +76,7 @@ export default function Parties() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
+      <section className="relative h-[60vh] pt-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
@@ -84,7 +84,7 @@ export default function Parties() {
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-4 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             Parties & Events
           </h1>
           <p className={`text-xl md:text-2xl text-foreground/80 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -130,18 +130,18 @@ export default function Parties() {
 
             {/* Content */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Create Unforgettable Memories
               </h2>
               <div className="w-12 h-1 bg-secondary mb-8"></div>
 
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-foreground/70 mb-4 leading-relaxed">
                 Whether you're celebrating a milestone birthday, hosting a baby
                 shower, or gathering for an anniversary, The Courtyard on Dauphin
                 provides the perfect setting for your special occasion.
               </p>
 
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-foreground/70 mb-4 leading-relaxed">
                 Our historic courtyard and elegant indoor spaces create an
                 atmosphere of sophistication and warmth. With flexible capacity
                 from 25 to 250+ guests, we can accommodate gatherings of any size.
@@ -241,7 +241,7 @@ export default function Parties() {
                   {pkg.name}
                 </h3>
                 <p className="text-secondary font-semibold mb-3">{pkg.guests}</p>
-                <p className="text-foreground/70 mb-6">{pkg.description}</p>
+                <p className="text-foreground/70 mb-4">{pkg.description}</p>
                 <CTAButton href="#contact-form" variant="outline" size="sm">
                   Get Details
                 </CTAButton>
@@ -307,7 +307,7 @@ export default function Parties() {
       {/* Final CTA */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Celebrate?
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">

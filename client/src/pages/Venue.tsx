@@ -13,27 +13,19 @@ export default function Venue() {
   const section1Ref = useScrollAnimation();
   const section2Ref = useScrollAnimation();
   const section3Ref = useScrollAnimation();
-  const [animateHero, setAnimateHero] = useState(false);
 
-  useEffect(() => {
-    setAnimateHero(true);
-  }, []);
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/6 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
-        </div>
+      <section className="relative h-[60vh] pt-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
+
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <h1 className="text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif">
             The Venue
           </h1>
-          <p className={`text-xl md:text-2xl text-foreground/80 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <p className="text-xl md:text-2xl text-foreground/80 mb-12 font-light">
             Historic elegance meets modern sophistication
           </p>
         </div>
@@ -50,10 +42,10 @@ export default function Venue() {
 
             {/* Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif animate-float-up">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4 font-serif animate-float-up">
                 A Space for Celebration
               </h2>
-              <p className="text-lg text-foreground/75 mb-6 leading-relaxed animate-float-up delay-100">
+              <p className="text-lg text-foreground/75 mb-4 leading-relaxed animate-float-up delay-100">
                 Nestled in the heart of historic downtown Mobile, The Courtyard on Dauphin offers an elegant setting for your most important moments. Our beautifully preserved venue combines historic charm with modern amenities.
               </p>
               <p className="text-lg text-foreground/75 leading-relaxed animate-float-up delay-200">
@@ -98,7 +90,7 @@ export default function Venue() {
       {/* Capacity Section */}
       <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in pattern-grid relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 text-center font-serif animate-float-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Flexible Capacity
           </h2>
 
@@ -129,7 +121,7 @@ export default function Venue() {
       {/* Final CTA */}
       <section className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/90 text-white pattern-fade relative">
         <div className="container text-center max-w-3xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif animate-float-up">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 font-serif animate-float-up">
             Ready to Tour?
           </h2>
           <p className="text-lg text-white/90 mb-8 animate-float-up delay-100">

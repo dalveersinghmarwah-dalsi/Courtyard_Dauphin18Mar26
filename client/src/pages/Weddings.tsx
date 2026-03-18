@@ -77,7 +77,7 @@ export default function Weddings() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
+      <section className="relative h-[60vh] pt-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
@@ -85,7 +85,7 @@ export default function Weddings() {
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-4 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             Weddings
           </h1>
           <p className={`text-xl md:text-2xl text-foreground/80 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -131,18 +131,18 @@ export default function Weddings() {
 
             {/* Content */}
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 Your Perfect Wedding Day
               </h2>
               <div className="w-12 h-1 bg-secondary mb-8"></div>
 
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-foreground/70 mb-4 leading-relaxed">
                 Every wedding is unique, and we believe your venue should reflect
                 your personal style and vision. The Courtyard on Dauphin provides
                 the perfect canvas for your dream wedding.
               </p>
 
-              <p className="text-foreground/70 mb-6 leading-relaxed">
+              <p className="text-foreground/70 mb-4 leading-relaxed">
                 Our historic courtyard offers timeless elegance, while our
                 flexible indoor and outdoor spaces accommodate ceremonies and
                 receptions of any size. From intimate gatherings of 50 to grand
@@ -203,8 +203,8 @@ export default function Weddings() {
                 <h3 className="text-2xl font-bold text-primary mb-3">
                   {pkg.name}
                 </h3>
-                <p className="text-foreground/70 mb-6">{pkg.description}</p>
-                <p className="text-sm text-foreground/60 mb-6">
+                <p className="text-foreground/70 mb-4">{pkg.description}</p>
+                <p className="text-sm text-foreground/60 mb-4">
                   Custom pricing based on your needs
                 </p>
                 <CTAButton href="#contact-form" variant="outline" size="sm">
@@ -215,7 +215,7 @@ export default function Weddings() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-foreground/70 mb-6">
+            <p className="text-foreground/70 mb-4">
               Contact us for detailed pricing and package information
             </p>
             <CTAButton href="/contact" size="lg">
@@ -277,7 +277,7 @@ export default function Weddings() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-foreground/70 mb-6">
+            <p className="text-foreground/70 mb-4">
               Have more questions? Contact our wedding specialists.
             </p>
             <CTAButton href="/contact" size="lg">
@@ -290,7 +290,7 @@ export default function Weddings() {
       {/* Final CTA */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Plan Your Wedding?
           </h2>
           <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">

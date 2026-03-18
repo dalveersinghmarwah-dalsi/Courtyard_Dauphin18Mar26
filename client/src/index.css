@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -127,10 +129,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Hind', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: #3a2a22;
   }

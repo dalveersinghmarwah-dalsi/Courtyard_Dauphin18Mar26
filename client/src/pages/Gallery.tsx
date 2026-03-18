@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSEO } from "@/hooks/useSEO";
 import { seoMetadata } from "@/lib/seo";
 import { X } from "lucide-react";
@@ -36,6 +36,12 @@ const categories = [
 ];
 
 export default function Gallery() {
+  const [animateHero, setAnimateHero] = useState(false);
+
+  useEffect(() => {
+    setAnimateHero(true);
+  }, []);
+
   useSEO(seoMetadata.gallery);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
@@ -48,12 +54,20 @@ export default function Gallery() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-[40vh] flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
+      <section className="relative h-[60vh] pt-32 overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
+
+
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/6 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+            <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
+          </div>
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} animate-very-slow-fade-in animate-continuous-float`}>
             Photo Gallery
           </h1>
-          <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className={`text-xl md:text-2xl text-foreground/80 mb-12 font-light transition-all duration-1000 delay-500 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} animate-very-slow-float`}>
             Explore the beauty and elegance of The Courtyard on Dauphin
           </p>
         </div>
