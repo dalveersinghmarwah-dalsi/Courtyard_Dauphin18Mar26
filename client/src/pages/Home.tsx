@@ -1,17 +1,14 @@
 import Layout from "@/components/Layout";
-import HeroSection from "@/components/HeroSection";
-import Testimonials from "@/components/Testimonials";
-import CTAButton from "@/components/CTAButton";
 import { useSEO } from "@/hooks/useSEO";
 import { seoMetadata } from "@/lib/seo";
-import { MapPin, Users, Sparkles } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import BotanicalDivider from "@/components/BotanicalDivider";
+import FeatureBadge from "@/components/FeatureBadge";
+import { Phone, MapPin, Users } from "lucide-react";
 
 /**
- * Design Philosophy: Refined Southern Elegance
- * - Asymmetric layout with generous whitespace
- * - Serif typography for headings, sans-serif for body
- * - Warm gold accents and deep charcoal text
- * - Photography-focused with minimal text
+ * Home Page - Sophisticated Warm Design
+ * Elegant layout with scroll animations, botanical elements, and graceful interactions
  */
 
 const testimonials = [
@@ -19,7 +16,7 @@ const testimonials = [
     name: "Sarah & Michael",
     role: "Wedding Couple",
     content:
-      "The Courtyard on Dauphin was the perfect backdrop for our wedding. The historic charm combined with modern amenities made everything seamless.",
+      "The Courtyard on Dauphin was the perfect backdrop for our wedding. The historic charm combined with modern amenities made everything seamless and magical.",
     rating: 5,
   },
   {
@@ -40,197 +37,261 @@ const testimonials = [
 
 export default function Home() {
   useSEO(seoMetadata.home);
+  const section1Ref = useScrollAnimation();
+  const section2Ref = useScrollAnimation();
+  const section3Ref = useScrollAnimation();
+  const testimonialRefs = testimonials.map(() => useScrollAnimation());
+
   return (
     <Layout>
       {/* Hero Section */}
-      <HeroSection
-        title="The Courtyard on Dauphin"
-        subtitle="A historic boutique venue in downtown Mobile, Alabama, perfect for weddings, celebrations, and corporate events."
-        ctaText="Book a Tour"
-        ctaHref="/contact"
-        ctaSecondary={{
-          text: "Explore the Venue",
-          href: "/venue",
-        }}
-      />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-muted/30 to-accent/20">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
 
-      {/* Venue Highlights */}
-      <section className="py-20 md:py-32 bg-background">
+        <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
+          <div className="mb-8 fade-in-up" style={{ animationDelay: "0.1s" }}>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight mb-6 font-serif">
+              The Courtyard on Dauphin
+            </h1>
+          </div>
+
+          <div className="mb-12 fade-in-up" style={{ animationDelay: "0.3s" }}>
+            <p className="text-lg md:text-2xl text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+              An experience tailored for <span className="font-semibold">you.</span>
+            </p>
+          </div>
+
+          <div
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up"
+            style={{ animationDelay: "0.5s" }}
+          >
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Schedule a Tour
+            </a>
+            <a
+              href="/venue"
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            >
+              Explore the Venue
+            </a>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <svg
+            className="w-6 h-6 text-primary"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </section>
+
+      {/* Welcome Section */}
+      <section
+        ref={section1Ref}
+        className="py-20 md:py-32 bg-white fade-in-up"
+      >
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-            {/* Highlight 1 */}
-            <div className="flex flex-col items-start">
-              <div className="mb-6">
-                <MapPin className="w-12 h-12 text-secondary" />
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                Historic Location
-              </h3>
-              <p className="text-foreground/70 leading-relaxed">
-                Located in the heart of downtown Mobile's historic district, our
-                venue offers authentic Southern charm with modern amenities.
-              </p>
-            </div>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif">
+              See a Virtual Tour or Schedule an In-Person Visit
+            </h2>
+            <p className="text-lg text-foreground/70 leading-relaxed">
+              Let us help you book an unforgettable experience. Picture a
+              stress-free event planning experience where you don't have to
+              worry about the nitty-gritty details.
+            </p>
+          </div>
 
-            {/* Highlight 2 */}
-            <div className="flex flex-col items-start">
-              <div className="mb-6">
-                <Users className="w-12 h-12 text-secondary" />
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                Flexible Capacity
-              </h3>
-              <p className="text-foreground/70 leading-relaxed">
-                From intimate gatherings of 25 to grand celebrations of 250+
-                guests, our space adapts to your vision and guest count.
-              </p>
-            </div>
-
-            {/* Highlight 3 */}
-            <div className="flex flex-col items-start">
-              <div className="mb-6">
-                <Sparkles className="w-12 h-12 text-secondary" />
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                Full-Service Support
-              </h3>
-              <p className="text-foreground/70 leading-relaxed">
-                Our dedicated event specialists handle every detail, from
-                catering coordination to day-of logistics.
-              </p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:251-333-7368"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 flex items-center gap-2"
+            >
+              <Phone size={18} />
+              Call to Book A Tour
+            </a>
+            <a
+              href="/contact"
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            >
+              Contact Us
+            </a>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            {/* Text */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Why Choose The Courtyard?
-              </h2>
-              <div className="w-12 h-1 bg-secondary mb-8"></div>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
-                The Courtyard on Dauphin is more than just a venue—it's a
-                destination. Our historic courtyard, originally built in the
-                1800s, provides an authentic backdrop for your most important
-                celebrations.
-              </p>
-              <p className="text-foreground/70 mb-8 leading-relaxed">
-                We believe in personalized service. Every event is unique, and
-                our team works closely with you to bring your vision to life.
-                Whether you're planning an intimate dinner or a grand wedding,
-                we're here to make it unforgettable.
-              </p>
-              <CTAButton href="/venue" variant="secondary">
-                Learn More About Us
-              </CTAButton>
-            </div>
-
-            {/* Placeholder for Image */}
-            <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-lg aspect-square flex items-center justify-center border border-border">
-              <div className="text-center">
-                <p className="text-foreground/50 text-sm">
-                  [Venue Image - High-quality courtyard photo]
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <Testimonials testimonials={testimonials} />
-
-      {/* Event Types Preview */}
-      <section className="py-20 md:py-32 bg-background">
+      {/* What Makes Us Perfect Section */}
+      <section
+        ref={section2Ref}
+        className="py-20 md:py-32 bg-muted/20 fade-in-up"
+      >
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Perfect for Every Occasion
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif">
+              What Makes The Courtyard on Dauphin Perfect For...
             </h2>
-            <div className="w-16 h-1 bg-secondary mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            {[
+              {
+                title: "Weddings?",
+                description:
+                  "You can use the same venue for both the ceremony and reception. Our staff can even adjust the layout to prepare for the reception festivities after the ceremony.",
+              },
+              {
+                title: "Corporate Events?",
+                description:
+                  "Corporate events hosted at a venue provide a professional and polished atmosphere for businesses to showcase their brand and impress clients.",
+              },
+              {
+                title: "Personal Celebrations?",
+                description:
+                  "From birthday parties to anniversaries and reunions, our flexible space adapts to your vision and creates memorable moments.",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-4 font-serif">
+                  {item.title}
+                </h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <BotanicalDivider />
+
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-primary mb-8 text-center font-serif">
+              Explore Your Options
+            </h3>
+            <div className="space-y-6">
+              <FeatureBadge number={1}>
+                <div>
+                  <h4 className="font-bold text-foreground mb-2">
+                    Professional Planning Support
+                  </h4>
+                  <p className="text-foreground/70">
+                    Our dedicated event specialists handle every detail, from
+                    catering coordination to day-of logistics.
+                  </p>
+                </div>
+              </FeatureBadge>
+              <FeatureBadge number={2}>
+                <div>
+                  <h4 className="font-bold text-foreground mb-2">
+                    Flexible Space & Capacity
+                  </h4>
+                  <p className="text-foreground/70">
+                    From intimate gatherings of 25 to grand celebrations of
+                    250+ guests, our space adapts to your vision.
+                  </p>
+                </div>
+              </FeatureBadge>
+              <FeatureBadge number={3}>
+                <div>
+                  <h4 className="font-bold text-foreground mb-2">
+                    Historic Location with Modern Amenities
+                  </h4>
+                  <p className="text-foreground/70">
+                    Located in the heart of downtown Mobile's historic district,
+                    offering authentic Southern charm with modern conveniences.
+                  </p>
+                </div>
+              </FeatureBadge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section
+        ref={section3Ref}
+        className="py-20 md:py-32 bg-primary text-primary-foreground fade-in-up"
+      >
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
+              What Our Clients Have Said About Us...
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Weddings */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="bg-gradient-to-br from-secondary/20 to-accent/20 h-48 flex items-center justify-center">
-                <p className="text-foreground/40">[Wedding Image]</p>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-3">Weddings</h3>
-                <p className="text-foreground/70 mb-6">
-                  From intimate ceremonies to grand receptions, create your
-                  perfect wedding day.
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                ref={testimonialRefs[index]}
+                className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-8 fade-in-up"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-secondary text-lg">
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className="text-primary-foreground/90 italic mb-6 leading-relaxed">
+                  "{testimonial.content}"
                 </p>
-                <CTAButton href="/weddings" variant="outline" size="sm">
-                  Learn More
-                </CTAButton>
+                <div>
+                  <p className="font-semibold text-primary-foreground">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-primary-foreground/70">
+                    {testimonial.role}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            {/* Parties & Personal Events */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="bg-gradient-to-br from-secondary/20 to-accent/20 h-48 flex items-center justify-center">
-                <p className="text-foreground/40">[Party Image]</p>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-3">
-                  Parties & Personal Events
-                </h3>
-                <p className="text-foreground/70 mb-6">
-                  Celebrate life's milestones with birthdays, showers, and more.
-                </p>
-                <CTAButton href="/parties" variant="outline" size="sm">
-                  Learn More
-                </CTAButton>
-              </div>
-            </div>
-
-            {/* Corporate Events */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              <div className="bg-gradient-to-br from-secondary/20 to-accent/20 h-48 flex items-center justify-center">
-                <p className="text-foreground/40">[Corporate Image]</p>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-primary mb-3">
-                  Corporate Events
-                </h3>
-                <p className="text-foreground/70 mb-6">
-                  Impress clients and energize teams with our professional space.
-                </p>
-                <CTAButton href="/corporate" variant="outline" size="sm">
-                  Learn More
-                </CTAButton>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
+      {/* Final CTA Section */}
+      <section className="py-20 md:py-32 bg-white">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Plan Your Event?
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif">
+            Ready to Find Out More?
           </h2>
-          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Contact our event specialists today to schedule a tour and discuss
-            your vision.
+          <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+            Let us help you book an unforgettable experience at The Courtyard
+            on Dauphin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <CTAButton href="/contact" variant="primary" size="lg">
-              Book a Tour
-            </CTAButton>
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Get in Touch
+            </a>
             <a
               href="tel:251-333-7368"
-              className="px-8 py-4 text-lg font-semibold border-2 border-primary-foreground text-primary-foreground rounded-lg hover:bg-primary-foreground hover:text-primary transition-colors"
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center gap-2"
             >
-              Call 251-333-RENT
+              <Phone size={18} />
+              251-333-RENT
             </a>
           </div>
         </div>

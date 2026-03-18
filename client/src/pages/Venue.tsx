@@ -1,253 +1,219 @@
 import Layout from "@/components/Layout";
-import CTAButton from "@/components/CTAButton";
 import { useSEO } from "@/hooks/useSEO";
 import { seoMetadata } from "@/lib/seo";
-import { MapPin, Clock, Users, Utensils } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import BotanicalDivider from "@/components/BotanicalDivider";
+import FeatureBadge from "@/components/FeatureBadge";
+import { MapPin, Wifi, Users, Utensils } from "lucide-react";
 
 /**
- * Design Philosophy: Refined Southern Elegance
- * - Photography-driven layout with minimal text
- * - Asymmetric grid showcasing venue images
- * - Gold accents and serif headings
+ * The Venue Page
+ * Detailed venue information with amenities and photo gallery
+ * Sophisticated warm design with scroll animations
  */
 
 export default function Venue() {
   useSEO(seoMetadata.venue);
+  const section1Ref = useScrollAnimation();
+  const section2Ref = useScrollAnimation();
+  const section3Ref = useScrollAnimation();
+
   const amenities = [
     {
       icon: Users,
       title: "Flexible Capacity",
-      description: "Accommodate 25 to 250+ guests with configurable layouts",
+      description: "Accommodate 25 to 250+ guests with adjustable layouts",
     },
     {
       icon: Utensils,
-      title: "Catering-Friendly",
-      description: "Full kitchen facilities and vendor coordination available",
+      title: "Full-Service Catering",
+      description: "Work with our recommended caterers or bring your own",
     },
     {
-      icon: Clock,
-      title: "Extended Hours",
-      description: "Day and evening events with flexible rental periods",
+      icon: Wifi,
+      title: "Modern Amenities",
+      description: "High-speed internet, climate control, and AV capabilities",
     },
     {
       icon: MapPin,
       title: "Historic Location",
-      description: "Downtown Mobile with nearby parking and accommodations",
+      description: "Downtown Mobile's most sought-after event venue",
     },
   ];
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-br from-primary/5 to-secondary/5 overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-muted/30 to-accent/20">
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
-            The Venue
+          <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight mb-6 font-serif fade-in-up">
+            The Courtyard on Dauphin
           </h1>
-          <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-            Discover the historic charm and modern elegance of The Courtyard on
-            Dauphin
+          <p className="text-xl md:text-2xl text-foreground/80 fade-in-up" style={{ animationDelay: "0.2s" }}>
+            Historic Elegance Meets Modern Sophistication
           </p>
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 md:py-32 bg-white">
+      {/* About the Space */}
+      <section ref={section1Ref} className="py-20 md:py-32 bg-white fade-in-up">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            {/* Text */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Historic Courtyard, Modern Amenities
-              </h2>
-              <div className="w-12 h-1 bg-secondary mb-8"></div>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
-                Built in the 1800s, The Courtyard on Dauphin is one of Mobile's
-                most charming and distinctive venues. Our historic courtyard
-                provides an authentic Southern backdrop that's both elegant and
-                intimate.
-              </p>
-              <p className="text-foreground/70 mb-6 leading-relaxed">
-                Located at 751 Dauphin Street in the heart of downtown Mobile,
-                we're surrounded by historic architecture, fine dining, and
-                cultural attractions. Our location is perfect for out-of-town
-                guests looking to experience authentic Mobile hospitality.
-              </p>
-              <p className="text-foreground/70 mb-8 leading-relaxed">
-                Whether you're planning a wedding, corporate event, or personal
-                celebration, our flexible space and dedicated team will ensure
-                your event is unforgettable.
-              </p>
-              <CTAButton href="/contact" size="lg">
-                Schedule a Tour
-              </CTAButton>
-            </div>
-
-            {/* Image Placeholder */}
-            <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-lg aspect-square flex items-center justify-center border border-border">
-              <div className="text-center">
-                <p className="text-foreground/50 text-sm">
-                  [Venue Exterior - Historic Courtyard Photo]
-                </p>
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif">
+              About The Space
+            </h2>
+            <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
+              The Courtyard on Dauphin is a stunning boutique event venue
+              located in the heart of historic downtown Mobile, Alabama. With
+              its elegant architecture, natural lighting, and versatile layout,
+              it's the perfect setting for weddings, corporate events, and
+              personal celebrations.
+            </p>
+            <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
+              Our dedicated event specialists work closely with you to
+              understand your vision and ensure that every detail is executed
+              flawlessly. From intimate gatherings to grand celebrations, we
+              have the expertise and resources to make your event unforgettable.
+            </p>
+            <p className="text-lg text-foreground/70 leading-relaxed">
+              Whether you're planning a ceremony and reception, a corporate
+              retreat, or a personal milestone celebration, The Courtyard on
+              Dauphin offers the perfect combination of historic charm and
+              modern amenities.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="py-20 md:py-32 bg-background">
+      {/* Amenities */}
+      <section ref={section2Ref} className="py-20 md:py-32 bg-muted/20 fade-in-up">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Venue Features
-            </h2>
-            <div className="w-16 h-1 bg-secondary mx-auto"></div>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
+            Venue Amenities
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {amenities.map((amenity, index) => {
               const Icon = amenity.icon;
               return (
-                <div key={index} className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <Icon className="w-8 h-8 text-secondary mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-primary mb-2">
-                      {amenity.title}
-                    </h3>
-                    <p className="text-foreground/70">{amenity.description}</p>
+                <div
+                  key={index}
+                  className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0">
+                      <Icon className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-2 font-serif">
+                        {amenity.title}
+                      </h3>
+                      <p className="text-foreground/70">{amenity.description}</p>
+                    </div>
                   </div>
                 </div>
               );
             })}
           </div>
+
+          <BotanicalDivider />
+
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-3xl font-bold text-primary mb-8 text-center font-serif">
+              Why Choose Us
+            </h3>
+            <div className="space-y-6">
+              <FeatureBadge number={1}>
+                <div>
+                  <h4 className="font-bold text-foreground mb-2">
+                    Professional Event Coordination
+                  </h4>
+                  <p className="text-foreground/70">
+                    Our experienced team handles all the details so you can
+                    focus on celebrating.
+                  </p>
+                </div>
+              </FeatureBadge>
+              <FeatureBadge number={2}>
+                <div>
+                  <h4 className="font-bold text-foreground mb-2">
+                    Customizable Spaces
+                  </h4>
+                  <p className="text-foreground/70">
+                    Adjust layouts and configurations to match your event
+                    vision perfectly.
+                  </p>
+                </div>
+              </FeatureBadge>
+              <FeatureBadge number={3}>
+                <div>
+                  <h4 className="font-bold text-foreground mb-2">
+                    Vendor Network
+                  </h4>
+                  <p className="text-foreground/70">
+                    Access to trusted local caterers, florists, and service
+                    providers.
+                  </p>
+                </div>
+              </FeatureBadge>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Photo Gallery Section */}
-      <section className="py-20 md:py-32 bg-white">
+      {/* Gallery Preview */}
+      <section ref={section3Ref} className="py-20 md:py-32 bg-white fade-in-up">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Photo Gallery
-            </h2>
-            <div className="w-16 h-1 bg-secondary mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {Array.from({ length: 9 }).map((_, index) => (
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 text-center font-serif">
+            Photo Gallery
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
-                key={index}
-                className="bg-gradient-to-br from-secondary/10 to-accent/10 aspect-square rounded-lg flex items-center justify-center border border-border hover:shadow-md transition-shadow cursor-pointer"
+                key={i}
+                className="aspect-square bg-gradient-to-br from-muted to-accent rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center"
               >
-                <p className="text-foreground/50 text-sm text-center px-4">
-                  [Gallery Image {index + 1}]
-                </p>
+                <span className="text-muted-foreground font-semibold">
+                  Gallery Image {i}
+                </span>
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <CTAButton href="/gallery" variant="secondary">
+          <div className="text-center">
+            <a
+              href="/gallery"
+              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 inline-block"
+            >
               View Full Gallery
-            </CTAButton>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Location Section */}
-      <section className="py-20 md:py-32 bg-background">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-            {/* Map Placeholder */}
-            <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-lg aspect-square flex items-center justify-center border border-border">
-              <div className="text-center">
-                <p className="text-foreground/50 text-sm">
-                  [Google Maps Embed]
-                </p>
-              </div>
-            </div>
-
-            {/* Location Info */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                Location & Hours
-              </h2>
-              <div className="w-12 h-1 bg-secondary mb-8"></div>
-
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-bold text-primary mb-2">
-                    Address
-                  </h3>
-                  <p className="text-foreground/70">
-                    751 Dauphin Street
-                    <br />
-                    Mobile, AL 36602
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-bold text-primary mb-2">
-                    Phone
-                  </h3>
-                  <a
-                    href="tel:251-333-7368"
-                    className="text-secondary hover:underline font-semibold"
-                  >
-                    251-333-RENT
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-bold text-primary mb-2">Email</h3>
-                  <a
-                    href="mailto:info@rentyellowhammer.com"
-                    className="text-secondary hover:underline"
-                  >
-                    info@rentyellowhammer.com
-                  </a>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-bold text-primary mb-2">
-                    Hours
-                  </h3>
-                  <p className="text-foreground/70">
-                    Tours available by appointment
-                    <br />
-                    Monday - Friday: 10am - 5pm
-                    <br />
-                    Saturday - Sunday: By request
-                  </p>
-                </div>
-
-                <div className="pt-6">
-                  <CTAButton href="/contact" size="lg">
-                    Schedule a Tour
-                  </CTAButton>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
+      {/* CTA Section */}
       <section className="py-20 md:py-32 bg-primary text-primary-foreground">
         <div className="container text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to See The Courtyard?
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
+            Ready to Book Your Event?
           </h2>
-          <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
-            Schedule a private tour and experience the magic of our historic
-            venue firsthand.
+          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            Schedule a tour of The Courtyard on Dauphin and discover why it's
+            the perfect venue for your special event.
           </p>
-          <CTAButton href="/contact" variant="primary" size="lg">
-            Book Your Tour
-          </CTAButton>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="/contact"
+              className="px-8 py-4 bg-primary-foreground text-primary rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Schedule a Tour
+            </a>
+            <a
+              href="tel:251-333-7368"
+              className="px-8 py-4 border-2 border-primary-foreground text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground hover:text-primary transition-all duration-300"
+            >
+              Call Us Today
+            </a>
+          </div>
         </div>
       </section>
     </Layout>
