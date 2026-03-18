@@ -48,6 +48,8 @@
   /* Light Royal Aesthetic - Much Lighter Palette */
   /* Primary: Dark Brown */
   --primary: #4a3a32;
+  /* Custom Background Color */
+  --custom-bg-color: #e8d9d5;
   --primary-foreground: #ffffff;
   /* Secondary: Dark Gold */
   --secondary: #8b7355;
@@ -146,6 +148,12 @@
   input[type="checkbox"]:not(:disabled),
   input[type="radio"]:not(:disabled) {
     @apply cursor-pointer;
+  }
+}
+
+@layer utilities {
+  .bg-custom-bg-color {
+    background-color: var(--custom-bg-color);
   }
 }
 
