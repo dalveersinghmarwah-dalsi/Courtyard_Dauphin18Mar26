@@ -4,7 +4,7 @@ import { seoMetadata } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 /**
- * Home Page - Light Royal Aesthetic
+ * Home Page - Light Royal Aesthetic with Elegant Patterns
  * Bright, elegant, animated with grace and movement
  */
 
@@ -18,30 +18,30 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/20 to-accent/15">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/8 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/8 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif fade-in-up animate-in">
             The Courtyard on Dauphin
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 mb-12 font-light fade-in-up animate-in" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-foreground/75 mb-12 font-light fade-in-up animate-in" style={{ animationDelay: "0.2s" }}>
             An experience tailored for you
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animate-in" style={{ animationDelay: "0.4s" }}>
             <a
               href="/contact"
-              className="px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="px-8 py-4 bg-secondary text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Schedule a Tour
             </a>
             <a
               href="/venue"
-              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300"
             >
               Explore the Venue
             </a>
@@ -50,8 +50,8 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section ref={section1Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in">
-        <div className="container max-w-3xl mx-auto px-4">
+      <section ref={section1Ref} className="py-24 md:py-32 bg-white pattern-dots fade-in-up animate-in relative">
+        <div className="container max-w-3xl mx-auto px-4 relative z-10">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif">
               Welcome to Elegance
@@ -65,8 +65,8 @@ export default function Home() {
       </section>
 
       {/* Event Types */}
-      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/20 to-accent/10 fade-in-up animate-in">
-        <div className="container max-w-5xl mx-auto px-4">
+      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/15 to-accent/10 fade-in-up animate-in pattern-lines relative">
+        <div className="container max-w-5xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
             Events We Host
           </h2>
@@ -98,8 +98,8 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in">
-        <div className="container max-w-4xl mx-auto px-4">
+      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in pattern-grid relative">
+        <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
             Why Choose Us
           </h2>
@@ -138,8 +138,8 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section ref={section4Ref} className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/95 text-primary-foreground fade-in-up animate-in">
-        <div className="container max-w-4xl mx-auto px-4">
+      <section ref={section4Ref} className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/90 text-white fade-in-up animate-in pattern-fade relative">
+        <div className="container max-w-4xl mx-auto px-4 relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center font-serif">
             What Our Clients Say
           </h2>
@@ -164,7 +164,7 @@ export default function Home() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="p-6 bg-primary-foreground/10 rounded-xl hover:bg-primary-foreground/20 transition-all duration-300 backdrop-blur-sm border border-primary-foreground/20"
+                className="p-6 bg-white/15 rounded-xl hover:bg-white/25 transition-all duration-300 backdrop-blur-sm border border-white/20"
               >
                 <p className="text-lg mb-4 italic">"{testimonial.quote}"</p>
                 <p className="font-semibold">{testimonial.name}</p>
@@ -187,13 +187,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
-              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Get in Touch
             </a>
             <a
               href="tel:251-333-7368"
-              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300"
             >
               Call 251-333-RENT
             </a>

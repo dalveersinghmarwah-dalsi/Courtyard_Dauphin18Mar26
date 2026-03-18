@@ -54,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-4">
             <a
               href="tel:251-333-7368"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300"
             >
               <Phone size={16} />
               <span>251-333-RENT</span>
@@ -96,7 +96,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <a
                 href="tel:251-333-7368"
-                className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2"
+                className="flex items-center gap-2 px-4 py-2 bg-secondary text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2"
               >
                 <Phone size={16} />
                 <span>251-333-RENT</span>
@@ -110,7 +110,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground mt-20">
+      <footer className="bg-primary text-white mt-20">
         <div className="container py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             {/* Brand */}
@@ -203,7 +203,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-primary-foreground/20 pt-8">
+          <div className="border-t border-white/20 pt-8">
             <p className="text-sm text-center opacity-75">
               © {new Date().getFullYear()} The Courtyard on Dauphin. All rights
               reserved. | Part of Yellowhammer Hospitality
@@ -214,7 +214,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       {/* Floating CTA for Mobile */}
       <div className="fixed bottom-6 right-6 md:hidden z-40 animate-float">
-        <Link href="/contact" className="flex items-center justify-center w-14 h-14 bg-secondary text-secondary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+        <Link href="/contact" className="flex items-center justify-center w-14 h-14 bg-secondary text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
           <Phone size={24} />
         </Link>
       </div>

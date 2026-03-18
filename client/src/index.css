@@ -43,53 +43,53 @@
 }
 
 :root {
-  /* Light Royal Aesthetic - Rose White, Cream, Light Gold, Pastels */
-  /* Primary: Warm Rose-Taupe */
-  --primary: #8b7355;
+  /* Light Royal Aesthetic - Much Lighter Palette */
+  /* Primary: Soft Warm Brown */
+  --primary: #9d8b7e;
   --primary-foreground: #ffffff;
-  /* Secondary: Soft Gold */
-  --secondary: #d4a574;
+  /* Secondary: Light Gold */
+  --secondary: #e8c9a0;
   --secondary-foreground: #ffffff;
-  /* Accent: Soft Rose */
-  --accent: #d4a5a5;
-  --accent-foreground: #5a4a4a;
+  /* Accent: Very Light Rose */
+  --accent: #e8d5d0;
+  --accent-foreground: #7a6a60;
   /* Sidebar colors */
-  --sidebar-primary: #a08070;
+  --sidebar-primary: #b5a396;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #d4a574;
+  --sidebar-accent: #e8c9a0;
   --sidebar-accent-foreground: #ffffff;
   /* Chart colors */
-  --chart-1: #d4a574;
-  --chart-2: #c9956f;
-  --chart-3: #b8856a;
-  --chart-4: #a07560;
-  --chart-5: #8b7355;
+  --chart-1: #e8c9a0;
+  --chart-2: #ddb88f;
+  --chart-3: #d2a77e;
+  --chart-4: #c7966d;
+  --chart-5: #9d8b7e;
   /* Spacing and radius */
   --radius: 0.75rem;
-  /* Background: Soft Rose-White */
-  --background: #faf7f5;
-  --foreground: #4a4a4a;
+  /* Background: Very Light Rose-White */
+  --background: #fdfbf9;
+  --foreground: #6a6a6a;
   --card: #ffffff;
-  --card-foreground: #4a4a4a;
+  --card-foreground: #6a6a6a;
   --popover: #ffffff;
-  --popover-foreground: #4a4a4a;
-  --muted: #f0e8e4;
-  --muted-foreground: #8b7355;
+  --popover-foreground: #6a6a6a;
+  --muted: #f5f0ed;
+  --muted-foreground: #9d8b7e;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e8ddd5;
+  --border: #ede8e3;
   --input: #ffffff;
-  --ring: #d4a574;
-  --sidebar: #faf7f5;
-  --sidebar-foreground: #4a4a4a;
-  --sidebar-border: #e8ddd5;
-  --sidebar-ring: #d4a574;
+  --ring: #e8c9a0;
+  --sidebar: #fdfbf9;
+  --sidebar-foreground: #6a6a6a;
+  --sidebar-border: #ede8e3;
+  --sidebar-ring: #e8c9a0;
 }
 
 .dark {
-  --primary: #a08070;
+  --primary: #b5a396;
   --primary-foreground: #ffffff;
-  --sidebar-primary: #b8956a;
+  --sidebar-primary: #c9b5a0;
   --sidebar-primary-foreground: #ffffff;
   --background: #2a2420;
   --foreground: #e8ddd5;
@@ -97,28 +97,28 @@
   --card-foreground: #e8ddd5;
   --popover: #3a3430;
   --popover-foreground: #e8ddd5;
-  --secondary: #d4a574;
+  --secondary: #e8c9a0;
   --secondary-foreground: #ffffff;
   --muted: #5a4a42;
   --muted-foreground: #d4b5a0;
-  --accent: #d4a5a5;
+  --accent: #e8d5d0;
   --accent-foreground: #2a2420;
   --destructive: #ff6b6b;
   --destructive-foreground: #ffffff;
   --border: #4a3a32;
   --input: #3a3430;
-  --ring: #d4a574;
-  --chart-1: #d4a574;
-  --chart-2: #c9956f;
-  --chart-3: #b8856a;
-  --chart-4: #a07560;
-  --chart-5: #8b7355;
+  --ring: #e8c9a0;
+  --chart-1: #e8c9a0;
+  --chart-2: #ddb88f;
+  --chart-3: #d2a77e;
+  --chart-4: #c7966d;
+  --chart-5: #9d8b7e;
   --sidebar: #3a3430;
   --sidebar-foreground: #e8ddd5;
-  --sidebar-accent: #d4a574;
+  --sidebar-accent: #e8c9a0;
   --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #4a3a32;
-  --sidebar-ring: #d4a574;
+  --sidebar-ring: #e8c9a0;
 }
 
 @layer base {
@@ -132,6 +132,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    color: #8b7b70;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -324,5 +325,37 @@
   /* Stagger animation */
   .stagger-item {
     animation-delay: var(--stagger-delay, 0s);
+  }
+
+  /* Subtle pattern backgrounds - dissolve effect */
+  .pattern-dots {
+    background-image: 
+      radial-gradient(circle, rgba(232, 201, 160, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .pattern-lines {
+    background-image: 
+      linear-gradient(45deg, rgba(232, 201, 160, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+
+  .pattern-grid {
+    background-image: 
+      linear-gradient(rgba(232, 201, 160, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 201, 160, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .pattern-fade {
+    position: relative;
+  }
+
+  .pattern-fade::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(232, 201, 160, 0.12) 0%, transparent 100%);
+    pointer-events: none;
   }
 }
