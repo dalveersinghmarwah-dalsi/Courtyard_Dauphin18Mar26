@@ -45,14 +45,14 @@
 :root {
   /* Light Royal Aesthetic - Much Lighter Palette */
   /* Primary: Soft Warm Brown */
-  --primary: #9d8b7e;
+  --primary: #6b5b50;
   --primary-foreground: #ffffff;
   /* Secondary: Light Gold */
-  --secondary: #e8c9a0;
+  --secondary: #c9a876;
   --secondary-foreground: #ffffff;
   /* Accent: Very Light Rose */
-  --accent: #e8d5d0;
-  --accent-foreground: #7a6a60;
+  --accent: #d4b5a8;
+  --accent-foreground: #5a4a42;
   /* Sidebar colors */
   --sidebar-primary: #b5a396;
   --sidebar-primary-foreground: #ffffff;
@@ -68,20 +68,20 @@
   --radius: 0.75rem;
   /* Background: Very Light Rose-White */
   --background: #fdfbf9;
-  --foreground: #6a6a6a;
+  --foreground: #4a4a4a;
   --card: #ffffff;
-  --card-foreground: #6a6a6a;
+  --card-foreground: #4a4a4a;
   --popover: #ffffff;
-  --popover-foreground: #6a6a6a;
+  --popover-foreground: #4a4a4a;
   --muted: #f5f0ed;
-  --muted-foreground: #9d8b7e;
+  --muted-foreground: #7a6a60;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #ede8e3;
   --input: #ffffff;
   --ring: #e8c9a0;
   --sidebar: #fdfbf9;
-  --sidebar-foreground: #6a6a6a;
+  --sidebar-foreground: #4a4a4a;
   --sidebar-border: #ede8e3;
   --sidebar-ring: #e8c9a0;
 }
@@ -132,7 +132,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    color: #8b7b70;
+    color: #5a4a42;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -330,20 +330,20 @@
   /* Subtle pattern backgrounds - dissolve effect */
   .pattern-dots {
     background-image: 
-      radial-gradient(circle, rgba(232, 201, 160, 0.15) 1px, transparent 1px);
+      radial-gradient(circle, rgba(201, 168, 118, 0.12) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
   .pattern-lines {
     background-image: 
-      linear-gradient(45deg, rgba(232, 201, 160, 0.1) 1px, transparent 1px);
+      linear-gradient(45deg, rgba(201, 168, 118, 0.1) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
   .pattern-grid {
     background-image: 
-      linear-gradient(rgba(232, 201, 160, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(232, 201, 160, 0.08) 1px, transparent 1px);
+      linear-gradient(rgba(201, 168, 118, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201, 168, 118, 0.08) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 
@@ -355,7 +355,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(232, 201, 160, 0.12) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(201, 168, 118, 0.1) 0%, transparent 100%);
     pointer-events: none;
   }
 }
