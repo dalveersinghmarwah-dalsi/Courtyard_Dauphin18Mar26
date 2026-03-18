@@ -2,10 +2,11 @@ import Layout from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
 import { seoMetadata } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useState, useEffect } from "react";
 
 /**
- * Home Page - Light Royal Aesthetic with Elegant Patterns
- * Bright, elegant, animated with grace and movement
+ * Home Page - Light Royal Aesthetic with Rich Animations
+ * Elegant, animated with floating and fade effects
  */
 
 export default function Home() {
@@ -14,25 +15,31 @@ export default function Home() {
   const section2Ref = useScrollAnimation();
   const section3Ref = useScrollAnimation();
   const section4Ref = useScrollAnimation();
+  const [animateHero, setAnimateHero] = useState(false);
+
+  useEffect(() => {
+    setAnimateHero(true);
+  }, []);
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/20 to-accent/15">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/10 to-accent/8">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/8 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/8 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/6 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/6 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }}></div>
         </div>
 
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif fade-in-up animate-in">
+          <h1 className={`text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif transition-all duration-1000 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             The Courtyard on Dauphin
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/75 mb-12 font-light fade-in-up animate-in" style={{ animationDelay: "0.2s" }}>
+          <p className={`text-xl md:text-2xl text-foreground/80 mb-12 font-light transition-all duration-1000 delay-200 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             An experience tailored for you
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animate-in" style={{ animationDelay: "0.4s" }}>
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-300 ${animateHero ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <a
               href="/contact"
               className="px-8 py-4 bg-secondary text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -53,21 +60,21 @@ export default function Home() {
       <section ref={section1Ref} className="py-24 md:py-32 bg-white pattern-dots fade-in-up animate-in relative">
         <div className="container max-w-3xl mx-auto px-4 relative z-10">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif animate-float-up">
               Welcome to Elegance
             </h2>
-            <p className="text-lg text-foreground/70 leading-relaxed mb-6">
+            <p className="text-lg text-foreground/80 leading-relaxed mb-6 animate-float-up delay-100">
               Located in the heart of historic downtown Mobile, The Courtyard on Dauphin offers a sophisticated setting for your most important celebrations. Whether you're planning an intimate gathering or a grand celebration, our elegant venue provides the perfect backdrop for unforgettable memories.
             </p>
-            <div className="w-12 h-1 bg-gradient-to-r from-secondary via-accent to-secondary mx-auto"></div>
+            <div className="w-12 h-1 bg-gradient-to-r from-secondary via-accent to-secondary mx-auto animate-float-up delay-200"></div>
           </div>
         </div>
       </section>
 
       {/* Event Types */}
-      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/15 to-accent/10 fade-in-up animate-in pattern-lines relative">
+      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/8 to-accent/6 fade-in-up animate-in pattern-lines relative">
         <div className="container max-w-5xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Events We Host
           </h2>
 
@@ -81,14 +88,14 @@ export default function Home() {
               <a
                 key={index}
                 href={event.href}
-                className="group p-8 bg-white rounded-xl text-center hover:shadow-xl hover:scale-105 transition-all duration-300 border border-muted"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-8 bg-white rounded-xl text-center hover:shadow-xl hover:scale-105 transition-all duration-300 border border-muted animate-float-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="text-4xl mb-4 group-hover:animate-float">{event.icon}</div>
+                <div className="text-4xl mb-4 group-hover:animate-float transition-all duration-300">{event.icon}</div>
                 <h3 className="text-2xl font-bold text-primary mb-4 font-serif group-hover:text-secondary transition-colors duration-300">
                   {event.title}
                 </h3>
-                <p className="text-foreground/60 text-sm">
+                <p className="text-foreground/70 text-sm">
                   Discover what makes us perfect for your {event.title.toLowerCase()}
                 </p>
               </a>
@@ -100,7 +107,7 @@ export default function Home() {
       {/* Why Choose Us */}
       <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in pattern-grid relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif animate-float-up">
             Why Choose Us
           </h2>
 
@@ -125,12 +132,13 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="p-6 border-l-4 border-secondary hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-muted/10 to-transparent rounded-r-lg"
+                className="p-6 border-l-4 border-secondary hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-muted/8 to-transparent rounded-r-lg animate-float-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-xl font-bold text-primary mb-3 font-serif">
                   {item.title}
                 </h3>
-                <p className="text-foreground/70">{item.description}</p>
+                <p className="text-foreground/75">{item.description}</p>
               </div>
             ))}
           </div>
@@ -138,9 +146,9 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section ref={section4Ref} className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/90 text-white fade-in-up animate-in pattern-fade relative">
+      <section ref={section4Ref} className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/95 text-white fade-in-up animate-in pattern-fade relative">
         <div className="container max-w-4xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center font-serif animate-float-up">
             What Our Clients Say
           </h2>
 
@@ -164,7 +172,8 @@ export default function Home() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="p-6 bg-white/15 rounded-xl hover:bg-white/25 transition-all duration-300 backdrop-blur-sm border border-white/20"
+                className="p-6 bg-white/15 rounded-xl hover:bg-white/25 transition-all duration-300 backdrop-blur-sm border border-white/20 animate-float-up"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <p className="text-lg mb-4 italic">"{testimonial.quote}"</p>
                 <p className="font-semibold">{testimonial.name}</p>
@@ -178,13 +187,13 @@ export default function Home() {
       {/* Final CTA */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container text-center max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif animate-float-up">
             Ready to Plan Your Event?
           </h2>
-          <p className="text-lg text-foreground/70 mb-8">
+          <p className="text-lg text-foreground/75 mb-8 animate-float-up delay-100">
             Let us help you create an unforgettable experience at The Courtyard on Dauphin.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-float-up delay-200">
             <a
               href="/contact"
               className="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"

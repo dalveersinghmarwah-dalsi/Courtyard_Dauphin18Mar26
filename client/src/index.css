@@ -44,15 +44,15 @@
 
 :root {
   /* Light Royal Aesthetic - Much Lighter Palette */
-  /* Primary: Soft Warm Brown */
-  --primary: #6b5b50;
+  /* Primary: Dark Brown */
+  --primary: #4a3a32;
   --primary-foreground: #ffffff;
-  /* Secondary: Light Gold */
-  --secondary: #c9a876;
+  /* Secondary: Dark Gold */
+  --secondary: #8b7355;
   --secondary-foreground: #ffffff;
-  /* Accent: Very Light Rose */
-  --accent: #d4b5a8;
-  --accent-foreground: #5a4a42;
+  /* Accent: Dark Rose */
+  --accent: #a89080;
+  --accent-foreground: #3a2a22;
   /* Sidebar colors */
   --sidebar-primary: #b5a396;
   --sidebar-primary-foreground: #ffffff;
@@ -67,21 +67,21 @@
   /* Spacing and radius */
   --radius: 0.75rem;
   /* Background: Very Light Rose-White */
-  --background: #fdfbf9;
-  --foreground: #4a4a4a;
+  --background: #fefdfb;
+  --foreground: #2a2a2a;
   --card: #ffffff;
-  --card-foreground: #4a4a4a;
+  --card-foreground: #2a2a2a;
   --popover: #ffffff;
-  --popover-foreground: #4a4a4a;
+  --popover-foreground: #2a2a2a;
   --muted: #f5f0ed;
-  --muted-foreground: #7a6a60;
+  --muted-foreground: #5a4a42;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #ede8e3;
   --input: #ffffff;
   --ring: #e8c9a0;
   --sidebar: #fdfbf9;
-  --sidebar-foreground: #4a4a4a;
+  --sidebar-foreground: #2a2a2a;
   --sidebar-border: #ede8e3;
   --sidebar-ring: #e8c9a0;
 }
@@ -132,7 +132,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    color: #5a4a42;
+    color: #3a2a22;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -297,34 +297,118 @@
   /* Floating animation */
   @keyframes float {
     0%, 100% {
-      transform: translateY(0px);
+      transform: translateY(0px) rotate(0deg);
+      opacity: 1;
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-15px) rotate(2deg);
+      opacity: 0.95;
     }
   }
 
   .animate-float {
-    animation: float 3s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Floating fade animation */
+  @keyframes floatFade {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+
+  .animate-float-fade {
+    animation: floatFade 3s ease-in-out infinite;
   }
 
   /* Pulse animation */
   @keyframes softPulse {
     0%, 100% {
       opacity: 1;
+      transform: scale(1);
     }
     50% {
-      opacity: 0.8;
+      opacity: 0.7;
+      transform: scale(1.05);
     }
   }
 
   .animate-soft-pulse {
-    animation: softPulse 2s ease-in-out infinite;
+    animation: softPulse 2.5s ease-in-out infinite;
+  }
+
+  /* Fade in animation */
+  @keyframes fadeInSlow {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeInSlow 2s ease-in-out forwards;
+  }
+
+  /* Fade out animation */
+  @keyframes fadeOutSlow {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  .animate-fade-out-slow {
+    animation: fadeOutSlow 2s ease-in-out forwards;
+  }
+
+  /* Floating up animation */
+  @keyframes floatUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-float-up {
+    animation: floatUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
 
   /* Stagger animation */
   .stagger-item {
     animation-delay: var(--stagger-delay, 0s);
+  }
+
+  /* Delay utilities for staggered animations */
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
   }
 
   /* Subtle pattern backgrounds - dissolve effect */
