@@ -3,8 +3,8 @@ import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 /**
- * Layout Component - Royal Luxury Aesthetic
- * Clean, elegant navigation with deep navy and gold accents
+ * Layout Component - Light Royal Aesthetic
+ * Bright, elegant navigation with soft rose-taupe and gold accents
  */
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -16,9 +16,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-sm border-b border-border shadow-sm">
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300 group">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold text-primary leading-none font-serif">
+              <span className="text-2xl font-bold text-primary leading-none font-serif group-hover:text-secondary transition-colors duration-300">
                 THE COURTYARD
               </span>
               <span className="text-xs text-primary/60 font-semibold tracking-widest">
@@ -42,9 +42,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-300"
+                className="text-sm font-medium text-foreground hover:text-secondary transition-colors duration-300 relative group"
               >
                 {item.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
           </nav>
@@ -53,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-4">
             <a
               href="tel:251-333-7368"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:shadow-lg hover:scale-105 font-medium text-sm transition-all duration-300"
             >
               <Phone size={16} />
               <span>251-333-RENT</span>
@@ -72,7 +73,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <nav className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+          <nav className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm animate-in fade-in-up">
             <div className="container py-4 flex flex-col gap-2">
               {[
                 { href: "/", label: "Home" },
@@ -95,7 +96,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <a
                 href="tel:251-333-7368"
-                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2"
+                className="flex items-center gap-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-lg hover:shadow-lg transition-all duration-300 font-medium text-sm mt-2"
               >
                 <Phone size={16} />
                 <span>251-333-RENT</span>
@@ -212,7 +213,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </footer>
 
       {/* Floating CTA for Mobile */}
-      <div className="fixed bottom-6 right-6 md:hidden z-40">
+      <div className="fixed bottom-6 right-6 md:hidden z-40 animate-float">
         <Link href="/contact" className="flex items-center justify-center w-14 h-14 bg-secondary text-secondary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
           <Phone size={24} />
         </Link>

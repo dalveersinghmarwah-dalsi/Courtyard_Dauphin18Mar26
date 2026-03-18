@@ -2,14 +2,9 @@ import Layout from "@/components/Layout";
 import { useSEO } from "@/hooks/useSEO";
 import { seoMetadata } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import BotanicalDivider from "@/components/BotanicalDivider";
-import FeatureBadge from "@/components/FeatureBadge";
-import { MapPin, Wifi, Users, Utensils } from "lucide-react";
 
 /**
- * The Venue Page
- * Detailed venue information with amenities and photo gallery
- * Sophisticated warm design with scroll animations
+ * The Venue Page - Light Royal Aesthetic
  */
 
 export default function Venue() {
@@ -18,192 +13,124 @@ export default function Venue() {
   const section2Ref = useScrollAnimation();
   const section3Ref = useScrollAnimation();
 
-  const amenities = [
-    {
-      icon: Users,
-      title: "Flexible Capacity",
-      description: "Accommodate 25 to 250+ guests with adjustable layouts",
-    },
-    {
-      icon: Utensils,
-      title: "Full-Service Catering",
-      description: "Work with our recommended caterers or bring your own",
-    },
-    {
-      icon: Wifi,
-      title: "Modern Amenities",
-      description: "High-speed internet, climate control, and AV capabilities",
-    },
-    {
-      icon: MapPin,
-      title: "Historic Location",
-      description: "Downtown Mobile's most sought-after event venue",
-    },
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-muted/30 to-accent/20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/20">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+        </div>
+
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight mb-6 font-serif fade-in-up">
-            The Courtyard on Dauphin
+          <h1 className="text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif fade-in-up animate-in">
+            The Venue
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/80 fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Historic Elegance Meets Modern Sophistication
+          <p className="text-xl md:text-2xl text-foreground/80 font-light fade-in-up animate-in" style={{ animationDelay: "0.2s" }}>
+            Historic elegance meets modern sophistication
           </p>
         </div>
       </section>
 
-      {/* About the Space */}
-      <section ref={section1Ref} className="py-20 md:py-32 bg-white fade-in-up">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif">
-              About The Space
-            </h2>
-            <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
-              The Courtyard on Dauphin is a stunning boutique event venue
-              located in the heart of historic downtown Mobile, Alabama. With
-              its elegant architecture, natural lighting, and versatile layout,
-              it's the perfect setting for weddings, corporate events, and
-              personal celebrations.
-            </p>
-            <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
-              Our dedicated event specialists work closely with you to
-              understand your vision and ensure that every detail is executed
-              flawlessly. From intimate gatherings to grand celebrations, we
-              have the expertise and resources to make your event unforgettable.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              Whether you're planning a ceremony and reception, a corporate
-              retreat, or a personal milestone celebration, The Courtyard on
-              Dauphin offers the perfect combination of historic charm and
-              modern amenities.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* About Section */}
+      <section ref={section1Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in">
+        <div className="container max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Image Placeholder */}
+            <div className="bg-gradient-to-br from-muted to-accent/20 rounded-xl aspect-square flex items-center justify-center hover:shadow-lg transition-all duration-300">
+              <p className="text-foreground/50 text-sm">[Venue Photo]</p>
+            </div>
 
-      {/* Amenities */}
-      <section ref={section2Ref} className="py-20 md:py-32 bg-muted/20 fade-in-up">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
-            Venue Amenities
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {amenities.map((amenity, index) => {
-              const Icon = amenity.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <Icon className="w-8 h-8 text-secondary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-primary mb-2 font-serif">
-                        {amenity.title}
-                      </h3>
-                      <p className="text-foreground/70">{amenity.description}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <BotanicalDivider />
-
-          <div className="max-w-3xl mx-auto">
-            <h3 className="text-3xl font-bold text-primary mb-8 text-center font-serif">
-              Why Choose Us
-            </h3>
-            <div className="space-y-6">
-              <FeatureBadge number={1}>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">
-                    Professional Event Coordination
-                  </h4>
-                  <p className="text-foreground/70">
-                    Our experienced team handles all the details so you can
-                    focus on celebrating.
-                  </p>
-                </div>
-              </FeatureBadge>
-              <FeatureBadge number={2}>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">
-                    Customizable Spaces
-                  </h4>
-                  <p className="text-foreground/70">
-                    Adjust layouts and configurations to match your event
-                    vision perfectly.
-                  </p>
-                </div>
-              </FeatureBadge>
-              <FeatureBadge number={3}>
-                <div>
-                  <h4 className="font-bold text-foreground mb-2">
-                    Vendor Network
-                  </h4>
-                  <p className="text-foreground/70">
-                    Access to trusted local caterers, florists, and service
-                    providers.
-                  </p>
-                </div>
-              </FeatureBadge>
+            {/* Content */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-serif">
+                A Space for Celebration
+              </h2>
+              <p className="text-lg text-foreground/70 mb-6 leading-relaxed">
+                Nestled in the heart of historic downtown Mobile, The Courtyard on Dauphin offers an elegant setting for your most important moments. Our beautifully preserved venue combines historic charm with modern amenities.
+              </p>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                Whether you're planning an intimate gathering or a grand celebration, our flexible spaces adapt to your vision, ensuring your event is as unique as you are.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Preview */}
-      <section ref={section3Ref} className="py-20 md:py-32 bg-white fade-in-up">
-        <div className="container">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 text-center font-serif">
-            Photo Gallery
+      {/* Amenities */}
+      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/20 to-accent/10 fade-in-up animate-in">
+        <div className="container max-w-4xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
+            Amenities & Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              "Historic courtyard setting",
+              "Flexible indoor and outdoor spaces",
+              "Professional lighting and sound",
+              "Full kitchen facilities",
+              "Climate-controlled environments",
+              "Ample parking for guests",
+              "Professional event coordination",
+              "Vendor-friendly policies",
+            ].map((amenity, index) => (
               <div
-                key={i}
-                className="aspect-square bg-gradient-to-br from-muted to-accent rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center"
+                key={index}
+                className="flex items-start gap-4 p-6 bg-white rounded-xl hover:shadow-lg transition-all duration-300 border border-muted hover:scale-105"
               >
-                <span className="text-muted-foreground font-semibold">
-                  Gallery Image {i}
-                </span>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-secondary to-accent flex-shrink-0 mt-1 animate-soft-pulse"></div>
+                <p className="text-foreground/70 font-medium">{amenity}</p>
               </div>
             ))}
-          </div>
-          <div className="text-center">
-            <a
-              href="/gallery"
-              className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105 inline-block"
-            >
-              View Full Gallery
-            </a>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
-        <div className="container text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
-            Ready to Book Your Event?
+      {/* Capacity Section */}
+      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in">
+        <div className="container max-w-4xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-12 text-center font-serif">
+            Flexible Capacity
           </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Schedule a tour of The Courtyard on Dauphin and discover why it's
-            the perfect venue for your special event.
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { size: "Intimate", count: "25-75 guests", desc: "Perfect for small celebrations" },
+              { size: "Standard", count: "75-150 guests", desc: "Ideal for most events" },
+              { size: "Grand", count: "150-250+ guests", desc: "For large celebrations" },
+            ].map((capacity, index) => (
+              <div
+                key={index}
+                className="text-center p-8 border-t-4 border-secondary bg-gradient-to-b from-muted/10 to-transparent rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <h3 className="text-2xl font-bold text-primary mb-2 font-serif">
+                  {capacity.size}
+                </h3>
+                <p className="text-lg font-semibold text-secondary mb-2">
+                  {capacity.count}
+                </p>
+                <p className="text-foreground/70">{capacity.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/95 text-primary-foreground">
+        <div className="container text-center max-w-3xl mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif">
+            Ready to Tour?
+          </h2>
+          <p className="text-lg text-primary-foreground/90 mb-8">
+            Experience the elegance of The Courtyard on Dauphin in person.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
-              className="px-8 py-4 bg-primary-foreground text-primary rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Schedule a Tour
             </a>
@@ -211,7 +138,7 @@ export default function Venue() {
               href="tel:251-333-7368"
               className="px-8 py-4 border-2 border-primary-foreground text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground hover:text-primary transition-all duration-300"
             >
-              Call Us Today
+              Call 251-333-RENT
             </a>
           </div>
         </div>

@@ -4,8 +4,8 @@ import { seoMetadata } from "@/lib/seo";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 /**
- * Home Page - Royal Luxury Aesthetic
- * Clean, elegant, simple design with regal colors
+ * Home Page - Light Royal Aesthetic
+ * Bright, elegant, animated with grace and movement
  */
 
 export default function Home() {
@@ -13,19 +13,26 @@ export default function Home() {
   const section1Ref = useScrollAnimation();
   const section2Ref = useScrollAnimation();
   const section3Ref = useScrollAnimation();
+  const section4Ref = useScrollAnimation();
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary to-primary/95">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-muted/30 to-accent/20">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }}></div>
+        </div>
+
         <div className="container relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground leading-tight mb-6 font-serif">
+          <h1 className="text-6xl md:text-8xl font-bold text-primary leading-tight mb-6 font-serif fade-in-up animate-in">
             The Courtyard on Dauphin
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 font-light">
+          <p className="text-xl md:text-2xl text-foreground/80 mb-12 font-light fade-in-up animate-in" style={{ animationDelay: "0.2s" }}>
             An experience tailored for you
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in-up animate-in" style={{ animationDelay: "0.4s" }}>
             <a
               href="/contact"
               className="px-8 py-4 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -34,7 +41,7 @@ export default function Home() {
             </a>
             <a
               href="/venue"
-              className="px-8 py-4 border-2 border-primary-foreground text-primary-foreground rounded-lg font-semibold hover:bg-primary-foreground hover:text-primary transition-all duration-300"
+              className="px-8 py-4 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
               Explore the Venue
             </a>
@@ -43,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section ref={section1Ref} className="py-24 md:py-32 bg-white fade-in-up">
+      <section ref={section1Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in">
         <div className="container max-w-3xl mx-auto px-4">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8 font-serif">
@@ -52,13 +59,13 @@ export default function Home() {
             <p className="text-lg text-foreground/70 leading-relaxed mb-6">
               Located in the heart of historic downtown Mobile, The Courtyard on Dauphin offers a sophisticated setting for your most important celebrations. Whether you're planning an intimate gathering or a grand celebration, our elegant venue provides the perfect backdrop for unforgettable memories.
             </p>
-            <div className="w-12 h-1 bg-secondary mx-auto"></div>
+            <div className="w-12 h-1 bg-gradient-to-r from-secondary via-accent to-secondary mx-auto"></div>
           </div>
         </div>
       </section>
 
       {/* Event Types */}
-      <section ref={section2Ref} className="py-24 md:py-32 bg-muted/10 fade-in-up">
+      <section ref={section2Ref} className="py-24 md:py-32 bg-gradient-to-br from-muted/20 to-accent/10 fade-in-up animate-in">
         <div className="container max-w-5xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
             Events We Host
@@ -66,16 +73,18 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: "Weddings", href: "/weddings" },
-              { title: "Parties & Events", href: "/parties" },
-              { title: "Corporate", href: "/corporate" },
-              { title: "Gallery", href: "/gallery" },
+              { title: "Weddings", href: "/weddings", icon: "💍" },
+              { title: "Parties & Events", href: "/parties", icon: "🎉" },
+              { title: "Corporate", href: "/corporate", icon: "💼" },
+              { title: "Gallery", href: "/gallery", icon: "📸" },
             ].map((event, index) => (
               <a
                 key={index}
                 href={event.href}
-                className="group p-8 bg-white rounded-lg text-center hover:shadow-lg transition-all duration-300"
+                className="group p-8 bg-white rounded-xl text-center hover:shadow-xl hover:scale-105 transition-all duration-300 border border-muted"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
+                <div className="text-4xl mb-4 group-hover:animate-float">{event.icon}</div>
                 <h3 className="text-2xl font-bold text-primary mb-4 font-serif group-hover:text-secondary transition-colors duration-300">
                   {event.title}
                 </h3>
@@ -89,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up">
+      <section ref={section3Ref} className="py-24 md:py-32 bg-white fade-in-up animate-in">
         <div className="container max-w-4xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-16 text-center font-serif">
             Why Choose Us
@@ -114,7 +123,10 @@ export default function Home() {
                 description: "Located in downtown Mobile's most vibrant cultural and dining district.",
               },
             ].map((item, index) => (
-              <div key={index} className="p-6 border-l-4 border-secondary">
+              <div
+                key={index}
+                className="p-6 border-l-4 border-secondary hover:shadow-lg transition-all duration-300 bg-gradient-to-r from-muted/10 to-transparent rounded-r-lg"
+              >
                 <h3 className="text-xl font-bold text-primary mb-3 font-serif">
                   {item.title}
                 </h3>
@@ -126,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 md:py-32 bg-primary text-primary-foreground">
+      <section ref={section4Ref} className="py-24 md:py-32 bg-gradient-to-br from-primary to-primary/95 text-primary-foreground fade-in-up animate-in">
         <div className="container max-w-4xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center font-serif">
             What Our Clients Say
@@ -150,7 +162,10 @@ export default function Home() {
                 quote: "A truly special place. We felt like royalty celebrating our milestone here.",
               },
             ].map((testimonial, index) => (
-              <div key={index} className="p-6 bg-primary-foreground/10 rounded-lg">
+              <div
+                key={index}
+                className="p-6 bg-primary-foreground/10 rounded-xl hover:bg-primary-foreground/20 transition-all duration-300 backdrop-blur-sm border border-primary-foreground/20"
+              >
                 <p className="text-lg mb-4 italic">"{testimonial.quote}"</p>
                 <p className="font-semibold">{testimonial.name}</p>
                 <p className="text-sm opacity-80">{testimonial.event}</p>
